@@ -1,0 +1,10 @@
+May 23, 2020 2:25:16 PM client.clientPlayer addLog
+INFO: 
+May 23, 2020 2:25:16 PM client.clientPlayer signIn
+INFO: IP : 182.444.111.555, username : testuser18, start playerSignIn() operation.
+May 23, 2020 2:25:16 PM client.clientPlayer signIn
+INFO: IP : 182.444.111.555, username : testuser18, Result playerSignIn() : Player sign in successfully
+May 23, 2020 2:26:39 PM client.clientPlayer signOut
+INFO: IP : 182.444.111.555, username : testuser18, start playerSignOut() operation.
+May 23, 2020 2:26:39 PM client.clientPlayer signOut
+INFO: IP : 182.444.111.555, username : testuser18, Result playerSignOut() : Player sign out successfully

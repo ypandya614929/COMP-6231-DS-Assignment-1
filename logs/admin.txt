@@ -1,0 +1,40 @@
+May 23, 2020 2:28:47 PM client.clientAdmin addLog
+INFO: May 23, 2020 2:23:05 PM client.clientAdmin addLog
+INFO: 
+May 23, 2020 2:23:05 PM client.clientAdmin getPlayerStatus
+INFO: IP : 132.111.111.111, username : admin, start getPlayerStatus() operation.
+May 23, 2020 2:23:05 PM client.clientAdmin getPlayerStatus
+INFO: IP : 132.111.111.111, username : admin, Result getPlayerStatus() : Invalid username or password  
+May 23, 2020 2:23:13 PM client.clientAdmin getPlayerStatus
+INFO: IP : 182.111.111.112, username : admin, start getPlayerStatus() operation.
+May 23, 2020 2:23:13 PM client.clientAdmin getPlayerStatus
+INFO: IP : 182.111.111.112, username : admin, Result getPlayerStatus() : Invalid username or password  
+May 23, 2020 2:23:19 PM client.clientAdmin getPlayerStatus
+INFO: IP : 93.111.111.111, username : admin, start getPlayerStatus() operation.
+May 23, 2020 2:23:19 PM client.clientAdmin getPlayerStatus
+INFO: IP : 93.111.111.111, username : admin, Result getPlayerStatus() : European : 0 online , 4 offline.  Asian : 0 online , 5 offline. North-American : 0 online , 9 offline.
+May 23, 2020 2:23:55 PM client.clientAdmin getPlayerStatus
+INFO: IP : 93.123.123.123, username : admin, start getPlayerStatus() operation.
+May 23, 2020 2:23:55 PM client.clientAdmin getPlayerStatus
+INFO: IP : 93.123.123.123, username : admin, Result getPlayerStatus() : European : 0 online , 4 offline.  Asian : 1 online , 5 offline. North-American : 0 online , 9 offline.
+May 23, 2020 2:25:25 PM client.clientAdmin getPlayerStatus
+INFO: IP : 182.111.111.111, username : admin, start getPlayerStatus() operation.
+May 23, 2020 2:25:25 PM client.clientAdmin getPlayerStatus
+INFO: IP : 182.111.111.111, username : admin, Result getPlayerStatus() : Asian : 2 online , 4 offline.  European : 1 online , 3 offline. North-American : 1 online , 8 offline.
+May 23, 2020 2:26:01 PM client.clientAdmin getPlayerStatus
+INFO: IP : 132.123.123.123, username : admin, start getPlayerStatus() operation.
+May 23, 2020 2:26:01 PM client.clientAdmin getPlayerStatus
+INFO: IP : 132.123.123.123, username : admin, Result getPlayerStatus() : North-American : 1 online , 8 offline.  European : 1 online , 3 offline. Asian : 1 online , 5 offline.
+May 23, 2020 2:26:49 PM client.clientAdmin getPlayerStatus
+INFO: IP : 93.123.123.123, username : admin, start getPlayerStatus() operation.
+May 23, 2020 2:26:50 PM client.clientAdmin getPlayerStatus
+INFO: IP : 93.123.123.123, username : admin, Result getPlayerStatus() : European : 1 online , 3 offline.  Asian : 0 online , 6 offline. North-American : 1 online , 8 offline.
+
+May 23, 2020 2:28:47 PM client.clientAdmin getPlayerStatus
+INFO: IP : 182.123.123.123, username : admin, start getPlayerStatus() operation.
+May 23, 2020 2:28:47 PM client.clientAdmin getPlayerStatus
+INFO: IP : 182.123.123.123, username : admin, Result getPlayerStatus() : Invalid username or password  
+May 23, 2020 2:28:53 PM client.clientAdmin getPlayerStatus
+INFO: IP : 182.123.123.123, username : admin, start getPlayerStatus() operation.
+May 23, 2020 2:28:53 PM client.clientAdmin getPlayerStatus
+INFO: IP : 182.123.123.123, username : admin, Result getPlayerStatus() : Asian : 0 online , 5 offline.  European : 0 online , 4 offline. North-American : 0 online , 9 offline.
