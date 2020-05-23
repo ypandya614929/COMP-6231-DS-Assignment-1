@@ -1,0 +1,6 @@
+May 23, 2020 7:07:28 PM server.GameServer addLog
+INFO: 
+May 23, 2020 7:07:28 PM server.GameServer loadData
+INFO: IP : 132.115.115.115, username : testuser5, start createPlayerAccount() operation.
+May 23, 2020 7:07:28 PM server.GameServer loadData
+INFO: IP : 132.115.115.115, username : testuser5, Result createPlayerAccount() : Player created successfully

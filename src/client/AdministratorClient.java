@@ -20,10 +20,10 @@ import interfaceClass.AdminInterface;
  *
  * @author ypandya
  */
-public class clientAdmin {
+public class AdministratorClient {
 	
 	/**
-	 * 
+	 * This is the admin user class containing admin user operations
 	 */
 	static AdminInterface adminObj;
 	static Registry registry;
@@ -31,6 +31,7 @@ public class clientAdmin {
 	private static Logger logger;
 	
 	/**
+	 * main method to run the admin user operations
 	 * @param args
 	 * @throws NotBoundException
 	 * @throws IOException
@@ -63,8 +64,9 @@ public class clientAdmin {
 	}
 		
 	/**
+	 * This method is used to check the string is empty/null or not
 	 * @param str
-	 * @return
+	 * @return boolean true if string is null, false otherwise
 	 */
 	public static boolean isNullOrEmpty(String str) {
         if(str != null && !str.trim().isEmpty())
@@ -73,7 +75,8 @@ public class clientAdmin {
     }
 	
 	/**
-	 * @return
+	 * This method is used to check user wants to re-enter missing input or wants to quit
+	 * @return boolean true if user wants to exit, false otherwise
 	 * @throws IOException
 	 */
 	public static boolean exitCheck() throws IOException {
@@ -89,8 +92,9 @@ public class clientAdmin {
 	}
 	
 	/**
+	 * This method is used to check the ip is valid or not
 	 * @param ip
-	 * @return
+	 * @return boolean true if ip is valid, false otherwise
 	 */
 	public static boolean ipCheck(String ip) {
 		if (ip.startsWith("132") || ip.startsWith("182")) {
@@ -111,6 +115,7 @@ public class clientAdmin {
 	}
 	
 	/**
+	 * This method is used to get input to get player status
 	 * @throws IOException
 	 * @throws InterruptedException
 	 * @throws NotBoundException
@@ -173,6 +178,7 @@ public class clientAdmin {
 	}
 	
 	/**
+	 * This method is used to set/update logger
 	 * @param path
 	 * @param key
 	 */
@@ -206,13 +212,13 @@ public class clientAdmin {
 
 	
 	/**
+	 * This method is used to set the server object based on the ip
 	 * @param ip
 	 * @throws AccessException
 	 * @throws RemoteException
 	 * @throws NotBoundException
 	 */
-	public static void createAdminObject(String ip)
-			throws AccessException, RemoteException, NotBoundException {
+	public static void createAdminObject(String ip) throws AccessException, RemoteException, NotBoundException {
 		if (ip.startsWith("132")) {
 			adminObj = (AdminInterface) registry.lookup("North America");
 		} 

@@ -20,10 +20,10 @@ import interfaceClass.PlayerInterface;
  *
  * @author ypandya
  */
-public class clientPlayer {
+public class PlayerClient {
 
 	/**
-	 * 
+	 * This is the player user class containing player user operations
 	 */
 	static Registry reg;
 	static PlayerInterface playerObj;
@@ -32,6 +32,7 @@ public class clientPlayer {
 	private static String str2;
 
 	/**
+	 * main method to run the player user operations
 	 * @param args
 	 * @throws NotBoundException
 	 * @throws IOException
@@ -72,8 +73,9 @@ public class clientPlayer {
 	}
 		
 	/**
+	 * This method is used to check the string is empty/null or not
 	 * @param str
-	 * @return
+	 * @return boolean true if string is null, false otherwise
 	 */
 	public static boolean isNullOrEmpty(String str) {
         if(str != null && !str.trim().isEmpty())
@@ -82,7 +84,8 @@ public class clientPlayer {
     }
 	
 	/**
-	 * @return
+	 * This method is used to check user wants to re-enter missing input or wants to quit
+	 * @return boolean true if user wants to exit, false otherwise
 	 * @throws IOException
 	 */
 	public static boolean exitCheck() throws IOException {
@@ -98,8 +101,9 @@ public class clientPlayer {
 	}
 	
 	/**
+	 * This method is used to check the age is integer or not
 	 * @param str
-	 * @return
+	 * @return boolean true if string is integer, false otherwise
 	 */
 	public static boolean isNumeric(String str) { 
 		str2 = str;
@@ -115,8 +119,9 @@ public class clientPlayer {
 	}
 	
 	/**
+	 * This method is used to check the ip is valid or not
 	 * @param ip
-	 * @return
+	 * @return boolean true if ip is valid, false otherwise
 	 */
 	public static boolean ipCheck(String ip) {
 		if (ip == null || ip.equals("")) {
@@ -140,6 +145,7 @@ public class clientPlayer {
 	}
 	
 	/**
+	 * This method is used to get input to create player account
 	 * @throws IOException
 	 * @throws InterruptedException
 	 * @throws NotBoundException
@@ -237,6 +243,7 @@ public class clientPlayer {
 	}
 	
 	/**
+	 * This method is used to get input to sign in the player
 	 * @throws IOException
 	 * @throws InterruptedException
 	 * @throws NotBoundException
@@ -299,6 +306,7 @@ public class clientPlayer {
 	}
 	
 	/**
+	 * This method is used to get input to sign out the player
 	 * @throws IOException
 	 * @throws InterruptedException
 	 * @throws NotBoundException
@@ -350,6 +358,7 @@ public class clientPlayer {
 	}
 	
 	/**
+	 * This method is used to set/update logger
 	 * @param path
 	 * @param key
 	 */
@@ -383,6 +392,7 @@ public class clientPlayer {
 
 	
 	/**
+	 * This method is used to set the server object based on the ip
 	 * @param ip
 	 * @throws AccessException
 	 * @throws RemoteException

@@ -15,13 +15,14 @@ import controller.Controller;
 public class Europe {
 
 	/**
-	 * 
+	 * This is Europe server class
 	 */
 	Controller controllerObj = null;
 	private static Logger logger;
 	
 	/**
-	 * @param aThis
+	 * Constructor to set controller object
+	 * @param aThis controller object
 	 */
 	public Europe(Controller aThis) {
 		
@@ -29,7 +30,9 @@ public class Europe {
 	}
 
 	/**
-	 * @param port
+	 * This method is used to connect with port specific server to retrive player status from
+	 * that server
+	 * @param port port of the server that is running on
 	 */
 	public void serverConnection(int port) {
 		addLog("logs/EU.txt", "EU");
@@ -64,6 +67,7 @@ public class Europe {
 	}
 	
 	/**
+	 * This method is used to set/update logger
 	 * @param path
 	 * @param key
 	 */

@@ -1,6 +1,6 @@
-May 23, 2020 2:27:10 PM client.clientPlayer addLog
+May 23, 2020 7:07:28 PM server.GameServer addLog
 INFO: 
-May 23, 2020 2:27:10 PM client.clientPlayer signOut
-INFO: IP : 182.113.113.113, username : testuser17, start playerSignOut() operation.
-May 23, 2020 2:27:10 PM client.clientPlayer signOut
-INFO: IP : 182.113.113.113, username : testuser17, Result playerSignOut() : Player is not signed in
+May 23, 2020 7:07:28 PM server.GameServer loadData
+INFO: IP : 182.113.113.113, username : testuser17, start createPlayerAccount() operation.
+May 23, 2020 7:07:28 PM server.GameServer loadData
+INFO: IP : 182.113.113.113, username : testuser17, Result createPlayerAccount() : Player created successfully

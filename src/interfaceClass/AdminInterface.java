@@ -9,10 +9,11 @@ import java.rmi.Remote;
 public interface AdminInterface extends Remote {
 
 	/**
-	 * @param userName
-	 * @param password
-	 * @param ipAddress
-	 * @return
+	 * This interface method is used to get the status of all the players
+	 * @param userName username of the admin
+	 * @param password password of the admin
+	 * @param ipAddress ip of the admin
+	 * @return String containing number of online and offline players
 	 * @throws IOException
 	 */
 	public String getPlayerStatus(String userName, String password, String ipAddress) throws IOException;

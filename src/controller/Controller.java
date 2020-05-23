@@ -29,7 +29,8 @@ import model.EUData;
 public class Controller extends UnicastRemoteObject implements PlayerInterface, AdminInterface {
 
 	/**
-	 * 
+	 * This is the Controller class that handles data manipulation
+	 * between client and server/ server models
 	 */
 	public String IP;
 	public String returnData;
@@ -40,6 +41,7 @@ public class Controller extends UnicastRemoteObject implements PlayerInterface, 
 	public EUData euData;
 	
 	/**
+	 * Controller constructor
 	 * @param IP
 	 * @throws RemoteException
 	 */
@@ -77,7 +79,15 @@ public class Controller extends UnicastRemoteObject implements PlayerInterface, 
 	}
 
 	/**
-	 *
+	 * This class overriden method is used to create the player account
+	 * @param firstName firstname of the player
+	 * @param lastName lastname of the player
+	 * @param age age of the player
+	 * @param userName username of the player
+	 * @param password password of the player
+	 * @param ipAddress ip of the player
+	 * @return String containing success or error message
+	 * @throws IOException
 	 */
 	@Override
 	public String createPlayerAccount(String firstName, String lastName, String age, String userName, String password, String ipAddress) throws IOException {
@@ -95,7 +105,12 @@ public class Controller extends UnicastRemoteObject implements PlayerInterface, 
 	}
 	
 	/**
-	 *
+	 * This class overriden method is used to sign in into the player account
+	 * @param userName username of the player
+	 * @param password password of the player
+	 * @param ipAddress ip of the player
+	 * @return String containing success or error message
+	 * @throws IOException
 	 */
 	@Override
 	public String playerSignIn(String userName, String password, String ipAddress) throws IOException {
@@ -113,7 +128,12 @@ public class Controller extends UnicastRemoteObject implements PlayerInterface, 
 	}
 	
 	/**
-	 *
+	 * This class overriden method is used to sign out from the player account
+	 * @param userName username of the player
+	 * @param ipAddress ip of the player
+	 * @return String containing success or error message
+	 * @throws IOException
+	 * @throws InterruptedException
 	 */
 	@Override
 	public String playerSignOut(String userName, String ipAddress) throws IOException, InterruptedException {
@@ -131,7 +151,12 @@ public class Controller extends UnicastRemoteObject implements PlayerInterface, 
 	}
 	
 	/**
-	 *
+	 * This class overriden method is used to get the status of all the players
+	 * @param userName username of the admin
+	 * @param password password of the admin
+	 * @param ipAddress ip of the admin
+	 * @return String containing number of online and offline players
+	 * @throws IOException
 	 */
 	@Override
 	public String getPlayerStatus(String userName, String password, String ipAddress) throws IOException {
@@ -161,11 +186,13 @@ public class Controller extends UnicastRemoteObject implements PlayerInterface, 
 	}
 	
 	/**
-	 * @param username
-	 * @param password
-	 * @param ip
-	 * @param port
-	 * @return
+	 * This method is used to communicate with the other servers to get the player status
+	 * counts for admin user
+	 * @param username username of the admin
+	 * @param password password of the admin
+	 * @param ip ip of the admin
+	 * @param port port of the other servers that are running on
+	 * @return String containing number of online and offline players from port specific server
 	 */
 	public String DatafromOtherIP(String username, String password, String ip, int port) {
 

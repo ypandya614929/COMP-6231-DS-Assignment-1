@@ -7,13 +7,14 @@ package model;
 public class Administrator {
 	
 	/**
-	 * 
+	 * This is admin model class to store the admin data
 	 */
 	public String userName;
 	public String password;
 	public String ipAddress;
 	
 	/**
+	 * Administrator constructor to set admin data 
 	 * @param username
 	 * @param password
 	 * @param ipAddress
@@ -25,42 +26,48 @@ public class Administrator {
 	}
 
 	/**
-	 * @return
+	 * This method is used to get the username
+	 * @return String username of the admin
 	 */
 	public String getUserName() {
 		return userName;
 	}
 
 	/**
-	 * @param userName
+	 * This method is used to set username
+	 * @param userName username of the admin
 	 */
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
 
 	/**
-	 * @return
+	 * This method is used to get the password
+	 * @return String password of the admin
 	 */
 	public String getPassword() {
 		return password;
 	}
 
 	/**
-	 * @param password
+	 * This method is used to set password
+	 * @param password password of the admin
 	 */
 	public void setPassword(String password) {
 		this.password = password;
 	}
 
 	/**
-	 * @return
+	 * This method is used to get the ip
+	 * @return String ip of the admin
 	 */
 	public String getIpAddress() {
 		return ipAddress;
 	}
 
 	/**
-	 * @param ipAddress
+	 * This method is used to set ipAddress
+	 * @param ipAddress ip of the admin
 	 */
 	public void setIpAddress(String ipAddress) {
 		this.ipAddress = ipAddress;

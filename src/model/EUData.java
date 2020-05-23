@@ -1,6 +1,7 @@
 package model;
 
 import java.io.File;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.HashMap;
@@ -15,7 +16,7 @@ import java.util.logging.SimpleFormatter;
  */
 public class EUData {
 	/**
-	 * 
+	 * This is model class for Europe server
 	 */
 	HashMap<String, HashMap<String, Administrator>> adminserverData;
 	HashMap<String, HashMap<String, Player>> playerserverData;
@@ -23,13 +24,15 @@ public class EUData {
 	private static Logger logger;
 
 	/**
-	 * @return
+	 * This method is used to retrieve admin data from the server
+	 * @return HashMap containing admin server data
 	 */
 	public HashMap<String, HashMap<String, Administrator>> getAdminserverData() {
 		return adminserverData;
 	}
 
 	/**
+	 * This method is used to store player data on the server
 	 * @param serverData
 	 */
 	public void setPlayerserverData(HashMap<String, HashMap<String, Player>> serverData) {
@@ -37,13 +40,15 @@ public class EUData {
 	}
 	
 	/**
-	 * @return
+	 * This method is used to retrieve player data from the server
+	 * @return HashMap containing player server data
 	 */
 	public HashMap<String, HashMap<String, Player>> getPlayerserverData() {
 		return playerserverData;
 	}
 
 	/**
+	 * This method is used to store admin data on the server
 	 * @param serverData
 	 */
 	public void setAdminserverData(HashMap<String, HashMap<String, Administrator>> serverData) {
@@ -51,19 +56,24 @@ public class EUData {
 	}
 
 	/**
-	 * @return
+	 * This method is used to get ip of the server
+	 * @return String ip of the server
 	 */
 	public String geteuropIp() {
 		return europIp;
 	}
 
 	/**
-	 * @param europIp
+	 * This method is used to set ip of the server
+	 * @param europIp ip of the server
 	 */
 	public void seteuropIp(String europIp) {
 		this.europIp = europIp;
 	}
 
+	/**
+	 * Constructor
+	 */
 	public EUData() {
 		adminserverData = new HashMap<>();
 		playerserverData = new HashMap<>();
@@ -71,10 +81,11 @@ public class EUData {
 	}
 
 	/**
-	 * @param username
-	 * @param password
-	 * @param ip
-	 * @return
+	 * This synchronized method is used to get the status of all the players
+	 * @param userName username of the admin
+	 * @param password password of the admin
+	 * @param ipAddress ip of the admin
+	 * @return String containing number of online and offline players
 	 */
 	synchronized public String getPlayerStatus(String username, String password, String ip) {
 		logger.info("IP : " + ip + ", username : " + username + ", start getPlayerStatus() operation.");
@@ -112,19 +123,19 @@ public class EUData {
 			logger.info("IP : " + ip + ", username : " + username + ", Result getPlayerStatus() : " + "European : "+ onlineCount + " online , " + offlineCount + " offline. ");
 			return "European : "+ onlineCount + " online , " + offlineCount + " offline. ";
 		}
-		
 		logger.info("IP : " + ip + ", username : " + username + ", Result getPlayerStatus() : invalid username or password");
 		return "Invalid username or password";
 	}
 	
 	/**
-	 * @param firstName
-	 * @param lastName
-	 * @param age
-	 * @param userName
-	 * @param password
-	 * @param ipAddress
-	 * @return
+	 * This synchronized method is used to create the player account
+	 * @param firstName firstname of the player
+	 * @param lastName lastname of the player
+	 * @param age age of the player
+	 * @param userName username of the player
+	 * @param password password of the player
+	 * @param ipAddress ip of the player
+	 * @return String containing success or error message
 	 */
 	synchronized public String createPlayerAccount(String firstName, String lastName, String age, String userName, String password, String ipAddress) {
 		logger.info("IP : " + ipAddress + ", username : " + userName + ", start createPlayerAccount() operation.");
@@ -153,10 +164,11 @@ public class EUData {
 	}
 	
 	/**
-	 * @param userName
-	 * @param password
-	 * @param ipAddress
-	 * @return
+	 * This synchronized method is used to sign in into the player account
+	 * @param userName username of the player
+	 * @param password password of the player
+	 * @param ipAddress ip of the player
+	 * @return String containing success or error message
 	 */
 	synchronized public String playerSignIn(String userName, String password, String ipAddress) {
 		logger.info("IP : " + ipAddress + ", username : " + userName + ", start playerSignIn() operation.");
@@ -187,9 +199,10 @@ public class EUData {
 	}
 	
 	/**
-	 * @param userName
-	 * @param ipAddress
-	 * @return
+	 * This synchronized method is used to sign out from the player account
+	 * @param userName username of the player
+	 * @param ipAddress ip of the player
+	 * @return String containing success or error message
 	 */
 	synchronized public String playerSignOut(String userName, String ipAddress) {
 		logger.info("IP : " + ipAddress + ", username : " + userName + ", start playerSignOut() operation.");
@@ -218,6 +231,7 @@ public class EUData {
 	}
 	
 	/**
+	 * This method is used to set/update logger
 	 * @param path
 	 * @param key
 	 */
@@ -248,6 +262,5 @@ public class EUData {
 			logger.info("Unable to create file, please check file permission.");
 		}
 	}
-
 
 }
