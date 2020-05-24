@@ -1,20 +1,36 @@
-May 23, 2020 7:07:28 PM model.EUData addLog
+May 24, 2020 12:51:51 AM model.EUData addLog
 INFO: 
-May 23, 2020 7:07:28 PM server.Europe serverConnection
+May 24, 2020 12:51:51 AM server.Europe serverConnection
 INFO: European Server Started
-May 23, 2020 7:07:28 PM model.EUData createPlayerAccount
+May 24, 2020 12:51:56 AM model.EUData createPlayerAccount
 INFO: IP : 93.111.111.112, username : testuser10, start createPlayerAccount() operation.
-May 23, 2020 7:07:28 PM model.EUData createPlayerAccount
+May 24, 2020 12:51:56 AM model.EUData createPlayerAccount
 INFO: IP : 93.111.111.112, username : testuser10, Result createPlayerAccount() : Player created successfully
-May 23, 2020 7:07:28 PM model.EUData createPlayerAccount
+May 24, 2020 12:51:56 AM model.EUData createPlayerAccount
 INFO: IP : 93.222.111.113, username : testuser11, start createPlayerAccount() operation.
-May 23, 2020 7:07:28 PM model.EUData createPlayerAccount
+May 24, 2020 12:51:56 AM model.EUData createPlayerAccount
 INFO: IP : 93.222.111.113, username : testuser11, Result createPlayerAccount() : Player created successfully
-May 23, 2020 7:07:28 PM model.EUData createPlayerAccount
+May 24, 2020 12:51:56 AM model.EUData createPlayerAccount
 INFO: IP : 93.111.333.112, username : testuser12, start createPlayerAccount() operation.
-May 23, 2020 7:07:28 PM model.EUData createPlayerAccount
+May 24, 2020 12:51:56 AM model.EUData createPlayerAccount
 INFO: IP : 93.111.333.112, username : testuser12, Result createPlayerAccount() : Player created successfully
-May 23, 2020 7:07:28 PM model.EUData createPlayerAccount
+May 24, 2020 12:51:56 AM model.EUData createPlayerAccount
 INFO: IP : 93.444.111.110, username : testuser13, start createPlayerAccount() operation.
-May 23, 2020 7:07:28 PM model.EUData createPlayerAccount
+May 24, 2020 12:51:56 AM model.EUData createPlayerAccount
 INFO: IP : 93.444.111.110, username : testuser13, Result createPlayerAccount() : Player created successfully
+May 24, 2020 12:54:02 AM model.EUData createPlayerAccount
+INFO: IP : 93.111.111.112, username : testuser10, start createPlayerAccount() operation.
+May 24, 2020 12:54:02 AM model.EUData createPlayerAccount
+INFO: IP : 93.111.111.112, username : testuser10, Result createPlayerAccount() : Player already exists
+May 24, 2020 12:54:02 AM model.EUData createPlayerAccount
+INFO: IP : 93.222.111.113, username : testuser11, start createPlayerAccount() operation.
+May 24, 2020 12:54:02 AM model.EUData createPlayerAccount
+INFO: IP : 93.222.111.113, username : testuser11, Result createPlayerAccount() : Player already exists
+May 24, 2020 12:54:02 AM model.EUData createPlayerAccount
+INFO: IP : 93.111.333.112, username : testuser12, start createPlayerAccount() operation.
+May 24, 2020 12:54:02 AM model.EUData createPlayerAccount
+INFO: IP : 93.111.333.112, username : testuser12, Result createPlayerAccount() : Player already exists
+May 24, 2020 12:54:02 AM model.EUData createPlayerAccount
+INFO: IP : 93.444.111.110, username : testuser13, start createPlayerAccount() operation.
+May 24, 2020 12:54:02 AM model.EUData createPlayerAccount
+INFO: IP : 93.444.111.110, username : testuser13, Result createPlayerAccount() : Player already exists

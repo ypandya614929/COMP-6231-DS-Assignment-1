@@ -1,24 +1,48 @@
-May 23, 2020 7:07:28 PM model.ASData addLog
+May 24, 2020 12:51:51 AM model.ASData addLog
 INFO: 
-May 23, 2020 7:07:28 PM server.Asia serverConnection
+May 24, 2020 12:51:51 AM server.Asia serverConnection
 INFO: Asian Server Started
-May 23, 2020 7:07:28 PM model.ASData createPlayerAccount
+May 24, 2020 12:51:56 AM model.ASData createPlayerAccount
 INFO: IP : 182.111.111.112, username : testuser14, start createPlayerAccount() operation.
-May 23, 2020 7:07:28 PM model.ASData createPlayerAccount
+May 24, 2020 12:51:56 AM model.ASData createPlayerAccount
 INFO: IP : 182.111.111.112, username : testuser14, Result createPlayerAccount() : Player created successfully
-May 23, 2020 7:07:28 PM model.ASData createPlayerAccount
+May 24, 2020 12:51:56 AM model.ASData createPlayerAccount
 INFO: IP : 182.110.111.112, username : testuser15, start createPlayerAccount() operation.
-May 23, 2020 7:07:28 PM model.ASData createPlayerAccount
+May 24, 2020 12:51:56 AM model.ASData createPlayerAccount
 INFO: IP : 182.110.111.112, username : testuser15, Result createPlayerAccount() : Player created successfully
-May 23, 2020 7:07:28 PM model.ASData createPlayerAccount
+May 24, 2020 12:51:56 AM model.ASData createPlayerAccount
 INFO: IP : 182.111.111.112, username : testuser16, start createPlayerAccount() operation.
-May 23, 2020 7:07:28 PM model.ASData createPlayerAccount
+May 24, 2020 12:51:56 AM model.ASData createPlayerAccount
 INFO: IP : 182.111.111.112, username : testuser16, Result createPlayerAccount() : Player created successfully
-May 23, 2020 7:07:28 PM model.ASData createPlayerAccount
+May 24, 2020 12:51:56 AM model.ASData createPlayerAccount
 INFO: IP : 182.113.113.113, username : testuser17, start createPlayerAccount() operation.
-May 23, 2020 7:07:28 PM model.ASData createPlayerAccount
+May 24, 2020 12:51:56 AM model.ASData createPlayerAccount
 INFO: IP : 182.113.113.113, username : testuser17, Result createPlayerAccount() : Player created successfully
-May 23, 2020 7:07:28 PM model.ASData createPlayerAccount
+May 24, 2020 12:51:56 AM model.ASData createPlayerAccount
 INFO: IP : 182.444.111.555, username : testuser18, start createPlayerAccount() operation.
-May 23, 2020 7:07:28 PM model.ASData createPlayerAccount
+May 24, 2020 12:51:56 AM model.ASData createPlayerAccount
 INFO: IP : 182.444.111.555, username : testuser18, Result createPlayerAccount() : Player created successfully
+May 24, 2020 12:53:40 AM model.ASData playerSignIn
+INFO: IP : 182.444.111.555, username : testuser18, start playerSignIn() operation.
+May 24, 2020 12:53:40 AM model.ASData playerSignIn
+INFO: IP : 182.444.111.555, username : testuser18, Result playerSignIn() : Player sign in successfully
+May 24, 2020 12:54:02 AM model.ASData createPlayerAccount
+INFO: IP : 182.111.111.112, username : testuser14, start createPlayerAccount() operation.
+May 24, 2020 12:54:02 AM model.ASData createPlayerAccount
+INFO: IP : 182.111.111.112, username : testuser14, Result createPlayerAccount() : Player already exists
+May 24, 2020 12:54:02 AM model.ASData createPlayerAccount
+INFO: IP : 182.110.111.112, username : testuser15, start createPlayerAccount() operation.
+May 24, 2020 12:54:02 AM model.ASData createPlayerAccount
+INFO: IP : 182.110.111.112, username : testuser15, Result createPlayerAccount() : Player already exists
+May 24, 2020 12:54:02 AM model.ASData createPlayerAccount
+INFO: IP : 182.111.111.112, username : testuser16, start createPlayerAccount() operation.
+May 24, 2020 12:54:02 AM model.ASData createPlayerAccount
+INFO: IP : 182.111.111.112, username : testuser16, Result createPlayerAccount() : Player already exists
+May 24, 2020 12:54:02 AM model.ASData createPlayerAccount
+INFO: IP : 182.113.113.113, username : testuser17, start createPlayerAccount() operation.
+May 24, 2020 12:54:02 AM model.ASData createPlayerAccount
+INFO: IP : 182.113.113.113, username : testuser17, Result createPlayerAccount() : Player already exists
+May 24, 2020 12:54:02 AM model.ASData createPlayerAccount
+INFO: IP : 182.444.111.555, username : testuser18, start createPlayerAccount() operation.
+May 24, 2020 12:54:02 AM model.ASData createPlayerAccount
+INFO: IP : 182.444.111.555, username : testuser18, Result createPlayerAccount() : Player already exists

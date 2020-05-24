@@ -14,6 +14,8 @@ import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 import java.io.File;
+import java.io.FileReader;
+
 import interfaceClass.PlayerInterface;
 
 /**
@@ -42,6 +44,9 @@ public class PlayerClient {
 		
 		reg = LocateRegistry.getRegistry(8080);
 		br = new BufferedReader(new InputStreamReader(System.in));
+		loadData();
+		System.out.println("------------ Initial Data loaded ------------\n");
+		
 		while (true) {
 			playerObj = null;
 			System.out.println("Distributed Player Status System\n");
@@ -390,7 +395,6 @@ public class PlayerClient {
 		}
 	}
 
-	
 	/**
 	 * This method is used to set the server object based on the ip
 	 * @param ip
@@ -408,6 +412,41 @@ public class PlayerClient {
 		} 
 		else if (ip.startsWith("182")) {
 			playerObj = (PlayerInterface) reg.lookup("Asia");
+		}
+	}
+	
+	/**
+	 * This method is used to load the initial player data
+	 * @throws NotBoundException 
+	 */
+	static void loadData() throws NotBoundException {
+		
+		BufferedReader reader;
+		try {
+			reader = new BufferedReader(new FileReader("src/data.txt"));
+			String line = reader.readLine();
+			String response = "";
+			while (line != null) {
+				String[] listParts = line.split(",");
+				String firstname = listParts[0];
+				String lastname = listParts[1];
+				String age = listParts[2];
+				String username = listParts[3];
+				String password = listParts[4];
+				String ip = listParts[5];
+				
+				addLog("logs/" + username + ".txt", username);
+				logger.setUseParentHandlers(false);
+				logger.info("IP : " + ip + ", username : " + username + ", start createPlayerAccount() operation.");
+				createPlayerObject(ip);
+				response = playerObj.createPlayerAccount(firstname, lastname, age, username, password, ip);
+				logger.info("IP : " + ip + ", username : " + username + ", Result createPlayerAccount() : " + response);
+				logger.setUseParentHandlers(true);
+				line = reader.readLine();
+			}
+			reader.close();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 	}
 }
