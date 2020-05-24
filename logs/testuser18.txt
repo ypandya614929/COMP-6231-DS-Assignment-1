@@ -1,6 +1,6 @@
-May 23, 2020 7:07:28 PM server.GameServer addLog
+May 24, 2020 1:20:48 AM client.PlayerClient addLog
 INFO: 
-May 23, 2020 7:07:28 PM server.GameServer loadData
-INFO: IP : 182.444.111.555, username : testuser18, start createPlayerAccount() operation.
-May 23, 2020 7:07:28 PM server.GameServer loadData
-INFO: IP : 182.444.111.555, username : testuser18, Result createPlayerAccount() : Player created successfully
+May 24, 2020 1:20:48 AM client.PlayerClient signIn
+INFO: IP : 132.123.123.123, username : testuser18, start playerSignIn() operation.
+May 24, 2020 1:20:48 AM client.PlayerClient signIn
+INFO: IP : 132.123.123.123, username : testuser18, Result playerSignIn() : Player doesn't exists

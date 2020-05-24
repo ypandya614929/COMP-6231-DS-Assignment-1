@@ -3,15 +3,10 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.rmi.AlreadyBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
-import java.util.logging.FileHandler;
-import java.util.logging.Logger;
-import java.util.logging.SimpleFormatter;
 
 import controller.Controller;
 /**
@@ -23,7 +18,6 @@ public class GameServer {
 	/**
 	 * This is the GameServer class
 	 */
-	private static Logger logger;
 	
 	/**
 	 * main method to run all the servers
@@ -64,7 +58,6 @@ public class GameServer {
 		try {
 			reader = new BufferedReader(new FileReader("src/data.txt"));
 			String line = reader.readLine();
-			String response = "";
 			while (line != null) {
 				String[] listParts = line.split(",");
 				String firstName = listParts[0];
@@ -74,16 +67,13 @@ public class GameServer {
 				String password = listParts[4];
 				String ipAddress = listParts[5];
 				
-				addLog("logs/" + userName  + ".txt", userName);
-				logger.info("IP : " + ipAddress + ", username : " + userName + ", start createPlayerAccount() operation.");
 				if (ipAddress.startsWith("132")) {
-					response = northamerica.createPlayerAccount(firstName, lastName, age, userName, password, ipAddress);
+					northamerica.createPlayerAccount(firstName, lastName, age, userName, password, ipAddress);
 				} else if (ipAddress.startsWith("93")) {
-					response = europe.createPlayerAccount(firstName, lastName, age, userName, password, ipAddress);
+					europe.createPlayerAccount(firstName, lastName, age, userName, password, ipAddress);
 				} else if (ipAddress.startsWith("182")) {
-					response = asia.createPlayerAccount(firstName, lastName, age, userName, password, ipAddress);
+					asia.createPlayerAccount(firstName, lastName, age, userName, password, ipAddress);
 				}
-				logger.info("IP : " + ipAddress + ", username : " + userName + ", Result createPlayerAccount() : " + response);
 				line = reader.readLine();
 			}
 			reader.close();
@@ -100,39 +90,6 @@ public class GameServer {
 		File outputDir = new File(path);
 		if (!outputDir.exists()) {
 			outputDir.mkdir();
-		}
-	}
-	
-	/**
-	 * This method is used to set/update logger
-	 * @param path
-	 * @param key
-	 */
-	static void addLog(String path, String key) {
-		try {
-			File f = new File(path);
-			String data = "";
-			logger = Logger.getLogger(key);
-			if(f.exists() && !f.isDirectory()) { 
-				data = new String(Files.readAllBytes(Paths.get(path)));
-			}
-			if (logger.getHandlers().length < 1)
-			{	
-				try {
-					f.delete();
-				} catch (Exception e) {}
-				logger = Logger.getLogger(key);
-				FileHandler fh = new FileHandler(path, true);
-				SimpleFormatter ft = new SimpleFormatter();
-				fh.setFormatter(ft);
-				logger.addHandler(fh);
-				logger.setUseParentHandlers(false);
-				logger.info(data);
-				logger.setUseParentHandlers(true);
-				
-			}
-		} catch (Exception err) {
-			logger.info("Unable to create file, please check file permission.");
 		}
 	}
 	
