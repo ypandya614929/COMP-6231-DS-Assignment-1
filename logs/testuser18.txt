@@ -1,6 +1,12 @@
-May 24, 2020 1:20:48 AM client.PlayerClient addLog
+May 24, 2020 8:31:23 PM client.PlayerClient addLog
+INFO: May 24, 2020 1:20:48 AM client.PlayerClient addLog
 INFO: 
 May 24, 2020 1:20:48 AM client.PlayerClient signIn
 INFO: IP : 132.123.123.123, username : testuser18, start playerSignIn() operation.
 May 24, 2020 1:20:48 AM client.PlayerClient signIn
 INFO: IP : 132.123.123.123, username : testuser18, Result playerSignIn() : Player doesn't exists
+
+May 24, 2020 8:31:24 PM client.PlayerClient signIn
+INFO: IP : 182.111.111.555, username : testuser18, start playerSignIn() operation.
+May 24, 2020 8:31:24 PM client.PlayerClient signIn
+INFO: IP : 182.111.111.555, username : testuser18, Result playerSignIn() : Invalid password or IP address

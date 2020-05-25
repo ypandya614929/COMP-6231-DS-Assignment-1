@@ -1,0 +1,26 @@
+May 25, 2020 4:14:15 PM client.PlayerClient addLog
+INFO: 
+May 25, 2020 4:14:15 PM client.PlayerClient createAccount
+INFO: IP : 182.111.111.111, username : yashpa, start createPlayerAccount() operation.
+May 25, 2020 4:14:15 PM client.PlayerClient createAccount
+INFO: IP : 182.111.111.111, username : yashpa, Result createPlayerAccount() : Player created successfully
+May 25, 2020 4:16:24 PM client.PlayerClient signIn
+INFO: IP : 182.111.111.111, username : yashpa, start playerSignIn() operation.
+May 25, 2020 4:16:24 PM client.PlayerClient signIn
+INFO: IP : 182.111.111.111, username : yashpa, Result playerSignIn() : Player sign in successfully
+May 25, 2020 4:16:49 PM client.PlayerClient signIn
+INFO: IP : 182.111.111.111, username : yashpa, start playerSignIn() operation.
+May 25, 2020 4:16:49 PM client.PlayerClient signIn
+INFO: IP : 182.111.111.111, username : yashpa, Result playerSignIn() : Player already signed in
+May 25, 2020 4:16:58 PM client.PlayerClient signOut
+INFO: IP : 182.111.111.111, username : yashpa, start playerSignOut() operation.
+May 25, 2020 4:16:58 PM client.PlayerClient signOut
+INFO: IP : 182.111.111.111, username : yashpa, Result playerSignOut() : Player sign out successfully
+May 25, 2020 4:17:07 PM client.PlayerClient signOut
+INFO: IP : 182.111.111.321, username : yashpa, start playerSignOut() operation.
+May 25, 2020 4:17:07 PM client.PlayerClient signOut
+INFO: IP : 182.111.111.321, username : yashpa, Result playerSignOut() : Invalid IP address
+May 25, 2020 4:17:14 PM client.PlayerClient signOut
+INFO: IP : 182.111.111.111, username : yashpa, start playerSignOut() operation.
+May 25, 2020 4:17:14 PM client.PlayerClient signOut
+INFO: IP : 182.111.111.111, username : yashpa, Result playerSignOut() : Player is not signed in

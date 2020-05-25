@@ -51,7 +51,7 @@ public class Europe {
 				String password = data1[1];
 				String ip = data1[2];
 				String temp = "";
-				if (username.equals("admin") && password.equals("admin")) {
+				if (username.equals("Admin") && password.equals("Admin")) {
 					temp = controllerObj.euData.getPlayerStatus(username, password, ip);
 				}
 				DatagramPacket dp1 = new DatagramPacket(temp.getBytes(), temp.length(),

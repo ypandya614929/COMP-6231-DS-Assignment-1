@@ -44,7 +44,7 @@ public class AdministratorClient {
 		br = new BufferedReader(new InputStreamReader(System.in));
 		while (true) {
 			adminObj = null;
-			System.out.println("Distributed Player Status System");
+			System.out.println("\nDistributed Player Status System");
 			System.out.println("================================");
 			System.out.println("Admin Options : \n");
 			System.out.println("1 : Get Player status");
@@ -58,7 +58,7 @@ public class AdministratorClient {
 				break;
 			}
 			else {
-				System.out.println("\nPlease select valid option\n");
+				System.out.println("===== Please select valid option =====");
 				continue;
 			}
 		}
@@ -81,15 +81,28 @@ public class AdministratorClient {
 	 * @throws IOException
 	 */
 	public static boolean exitCheck() throws IOException {
-		System.out.println("\n----- Invalid Input -----\n");
-		System.out.println("Please select below options : ");
-		System.out.println("1 : Do you want to re-enter");
-		System.out.println("2 : exit");
-		String str = br.readLine().trim();
-		if (str.equals("exit") || str.equals("2")) {
-			return true;
+		boolean is_return = false;
+		while (true) {
+			System.out.println("Please select below options : ");
+			System.out.println("1 : Do you want to re-enter");
+			System.out.println("2 : exit");
+			System.out.print("Select : ");
+			String str = br.readLine().trim();
+			if (str.equals("1")) {
+				is_return = false;
+				break;
+			}
+			else if (str.equals("exit") || str.equals("2")) {
+				is_return = true;
+				break;
+			}
+			else {
+				System.out.println("===== Please select valid option =====");
+				is_return = false;
+				continue;
+			}
 		}
-		return false;
+		return is_return;
 	}
 	
 	/**
@@ -132,9 +145,12 @@ public class AdministratorClient {
 				while (isNullOrEmpty(username)) {
 					System.out.print("Enter username : ");
 					username = br.readLine().trim();
-					if (isNullOrEmpty(username) && exitCheck()) {
-						returnMenu = true;
-						break;
+					if (isNullOrEmpty(username)) {
+						System.out.println("===== The username can't be empty. =====");
+						if(exitCheck()) {
+							returnMenu = true;
+							break;
+						}
 					}
 				}
 			}
@@ -142,9 +158,12 @@ public class AdministratorClient {
 				while (isNullOrEmpty(password)) {
 					System.out.print("Enter password : ");
 					password = br.readLine().trim();
-					if (isNullOrEmpty(password) && exitCheck()) {
-						returnMenu = true;
-						break;
+					if (isNullOrEmpty(password)) {
+						System.out.println("===== The password can't be empty. =====");
+						if(exitCheck()) {
+							returnMenu = true;
+							break;
+						}
 					}
 				}
 			}
@@ -157,6 +176,7 @@ public class AdministratorClient {
 						break;
 					}
 					else {
+						System.out.println("===== The ip must be in following format 132.XXX.XXX.XXX or 93.XXX.XXX.XXX or 182.XXX.XXX.XXX. =====");
 						if (exitCheck()) {
 							returnMenu = true;
 							break;

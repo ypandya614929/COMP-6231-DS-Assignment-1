@@ -1,7 +1,6 @@
 package model;
 
 import java.io.File;
-import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.HashMap;
@@ -107,7 +106,7 @@ public class NAData {
 			adminserverData.put(key, temp1);
 		}
 		adminObj.setPassword(password);
-		if (adminObj.userName.equals("admin") && adminObj.password.equals("admin")) {
+		if (adminObj.userName.equals("Admin") && adminObj.password.equals("Admin")) {
 			for (Entry <String, HashMap<String, Player>> outerHashmap : playerserverData.entrySet()) {
 				for (Entry <String, Player> innerHashmap : outerHashmap.getValue().entrySet()) {
 					if (innerHashmap.getValue() != null) {

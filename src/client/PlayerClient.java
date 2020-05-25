@@ -46,7 +46,7 @@ public class PlayerClient {
 		br = new BufferedReader(new InputStreamReader(System.in));
 		while (true) {
 			playerObj = null;
-			System.out.println("Distributed Player Status System\n");
+			System.out.println("\nDistributed Player Status System");
 			System.out.println("================================");
 			System.out.println("Player Options : \n");
 			System.out.println("1 : Create Player Account");
@@ -68,7 +68,7 @@ public class PlayerClient {
 				break;
 			}
 			else {
-				System.out.println("\nPlease select valid option\n");
+				System.out.println("===== Please select valid option =====");
 				continue;
 			}
 		}
@@ -91,15 +91,28 @@ public class PlayerClient {
 	 * @throws IOException
 	 */
 	public static boolean exitCheck() throws IOException {
-		System.out.println("----- Invalid Data -----");
-		System.out.println("Please select below options : ");
-		System.out.println("1 : Do you want to re-enter");
-		System.out.println("2 : exit");
-		String str = br.readLine().trim();
-		if (str.equals("exit") || str.equals("2")) {
-			return true;
+		boolean is_return = false;
+		while (true) {
+			System.out.println("Please select below options : ");
+			System.out.println("1 : Do you want to re-enter");
+			System.out.println("2 : exit");
+			System.out.print("Select : ");
+			String str = br.readLine().trim();
+			if (str.equals("1")) {
+				is_return = false;
+				break;
+			}
+			else if (str.equals("exit") || str.equals("2")) {
+				is_return = true;
+				break;
+			}
+			else {
+				System.out.println("===== Please select valid option =====");
+				is_return = false;
+				continue;
+			}
 		}
-		return false;
+		return is_return;
 	}
 	
 	/**
@@ -109,7 +122,7 @@ public class PlayerClient {
 	 */
 	public static boolean isNumeric(String str) { 
 		str2 = str;
-		if(str2 == null && str2.trim().isEmpty()) {
+		if(str2 == null || str2.trim().isEmpty()) {
             return false;
 		}
 		try {  
@@ -117,6 +130,42 @@ public class PlayerClient {
 		    return true;
 		} catch(NumberFormatException e){  
 		    return false;  
+		}
+	}
+	
+	/**
+	 * This method is used to check the username validations
+	 * @param str
+	 * @return boolean true if username is valid, false otherwise
+	 */
+	public static boolean isUserNameCheck(String str) { 
+		str2 = str;
+		if(str2 == null || str2.trim().isEmpty()) {
+            return false;
+		}
+		else {
+			if (str2.length()<6 || str2.length()>15) {
+				return false;
+			}
+			return true;
+		}
+	}
+	
+	/**
+	 * This method is used to check the password validations
+	 * @param str
+	 * @return boolean true if password is valid, false otherwise
+	 */
+	public static boolean isPasswordCheck(String str) { 
+		str2 = str;
+		if(str2 == null || str2.trim().isEmpty()) {
+            return false;
+		}
+		else {
+			if (str2.length()<6) {
+				return false;
+			}
+			return true;
 		}
 	}
 	
@@ -163,30 +212,11 @@ public class PlayerClient {
 		boolean returnMenu = false;
 		while (!returnMenu) {
 			if (!is_info_collected) {
-				while (isNullOrEmpty(firstname)) {
+				while (isNullOrEmpty(firstname) && !is_info_collected) {
 					System.out.print("Enter firstname : ");
 					firstname = br.readLine().trim();
-					if (isNullOrEmpty(firstname) && exitCheck()) {
-						returnMenu = true;
-						break;
-					}
-				}
-			}
-			if (!returnMenu) {
-				while (isNullOrEmpty(lastname)) {
-					System.out.print("Enter lastname : ");
-					lastname = br.readLine().trim();
-					if (isNullOrEmpty(lastname) && exitCheck()) {
-						returnMenu = true;
-						break;
-					}
-				}
-			}
-			if (!returnMenu) {
-				while (!isNumeric(age)) {
-					System.out.print("Enter age : ");
-					age = br.readLine().trim();
-					if (!isNumeric(age)) {
+					if (isNullOrEmpty(firstname)) {
+						System.out.println("===== The firstname can't be empty. =====");
 						if(exitCheck()) {
 							returnMenu = true;
 							break;
@@ -195,22 +225,54 @@ public class PlayerClient {
 				}
 			}
 			if (!returnMenu) {
-				while (isNullOrEmpty(username)) {
-					System.out.print("Enter username : ");
-					username = br.readLine().trim();
-					if (isNullOrEmpty(username) && exitCheck()) {
-						returnMenu = true;
-						break;
+				while (isNullOrEmpty(lastname) && !is_info_collected) {
+					System.out.print("Enter lastname : ");
+					lastname = br.readLine().trim();
+					if (isNullOrEmpty(lastname)) {
+						System.out.println("===== The lastname can't be empty. =====");
+						if(exitCheck()) {
+							returnMenu = true;
+							break;
+						}
 					}
 				}
 			}
 			if (!returnMenu) {
-				while (isNullOrEmpty(password)) {
+				while (!isNumeric(age) && !is_info_collected) {
+					System.out.print("Enter age : ");
+					age = br.readLine().trim();
+					if (!isNumeric(age)) {
+						System.out.println("===== The age must be an integer. =====");
+						if(exitCheck()) {
+							returnMenu = true;
+							break;
+						}
+					}
+				}
+			}
+			if (!returnMenu) {
+				while (!isUserNameCheck(username) && !is_info_collected) {
+					System.out.print("Enter username : ");
+					username = br.readLine().trim();
+					if (!isUserNameCheck(username)) {
+						System.out.println("===== The username must be within 6 to 15 characters. =====");
+						if(exitCheck()) {
+							returnMenu = true;
+							break;
+						}
+					}
+				}
+			}
+			if (!returnMenu) {
+				while (!isPasswordCheck(password) && !is_info_collected) {
 					System.out.print("Enter password : ");
 					password = br.readLine().trim();
-					if (isNullOrEmpty(password) && exitCheck()) {
-						returnMenu = true;
-						break;
+					if (!isPasswordCheck(password)) {
+						System.out.println("===== The password must be more than 6 characters. =====");
+						if(exitCheck()) {
+							returnMenu = true;
+							break;
+						}
 					}
 				}
 			}
@@ -223,6 +285,7 @@ public class PlayerClient {
 						break;
 					}
 					else {
+						System.out.println("===== The ip must be in following format 132.XXX.XXX.XXX or 93.XXX.XXX.XXX or 182.XXX.XXX.XXX. =====");
 						if (exitCheck()) {
 							returnMenu = true;
 							break;
@@ -261,9 +324,12 @@ public class PlayerClient {
 				while (isNullOrEmpty(username)) {
 					System.out.print("Enter username : ");
 					username = br.readLine().trim();
-					if (isNullOrEmpty(username) && exitCheck()) {
-						returnMenu = true;
-						break;
+					if (isNullOrEmpty(username)) {
+						System.out.println("===== The username can't be empty. =====");
+						if(exitCheck()) {
+							returnMenu = true;
+							break;
+						}
 					}
 				}
 			}
@@ -271,9 +337,12 @@ public class PlayerClient {
 				while (isNullOrEmpty(password)) {
 					System.out.print("Enter password : ");
 					password = br.readLine().trim();
-					if (isNullOrEmpty(password) && exitCheck()) {
-						returnMenu = true;
-						break;
+					if (isNullOrEmpty(password)) {
+						System.out.println("===== The password can't be empty. =====");
+						if(exitCheck()) {
+							returnMenu = true;
+							break;
+						}
 					}
 				}
 			}
@@ -286,6 +355,7 @@ public class PlayerClient {
 						break;
 					}
 					else {
+						System.out.print("Enter ip-address in following format 132.XXX.XXX.XXX or 93.XXX.XXX.XXX or 182.XXX.XXX.XXX : ");
 						if (exitCheck()) {
 							returnMenu = true;
 							break;
@@ -323,9 +393,12 @@ public class PlayerClient {
 				while (isNullOrEmpty(username)) {
 					System.out.print("Enter username : ");
 					username = br.readLine().trim();
-					if (isNullOrEmpty(username) && exitCheck()) {
-						returnMenu = true;
-						break;
+					if (isNullOrEmpty(username)) {
+						System.out.println("===== The username can't be empty. =====");
+						if(exitCheck()) {
+							returnMenu = true;
+							break;
+						}
 					}
 				}
 			}
@@ -338,6 +411,7 @@ public class PlayerClient {
 						break;
 					}
 					else {
+						System.out.print("Enter ip-address in following format 132.XXX.XXX.XXX or 93.XXX.XXX.XXX or 182.XXX.XXX.XXX : ");
 						if (exitCheck()) {
 							returnMenu = true;
 							break;
