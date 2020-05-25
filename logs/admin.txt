@@ -1,4 +1,5 @@
-May 24, 2020 1:21:10 AM client.AdministratorClient addLog
+May 24, 2020 8:06:07 PM client.AdministratorClient addLog
+INFO: May 24, 2020 1:21:10 AM client.AdministratorClient addLog
 INFO: 
 May 24, 2020 1:21:10 AM client.AdministratorClient getPlayerStatus
 INFO: IP : 93.123.123.123, username : admin, start getPlayerStatus() operation.
@@ -12,3 +13,12 @@ May 24, 2020 1:21:56 AM client.AdministratorClient getPlayerStatus
 INFO: IP : 132.222.222.222, username : admin, start getPlayerStatus() operation.
 May 24, 2020 1:21:56 AM client.AdministratorClient getPlayerStatus
 INFO: IP : 132.222.222.222, username : admin, Result getPlayerStatus() : North-American : 0 online , 10 offline.  European : 0 online , 4 offline. Asian : 0 online , 5 offline.
+
+May 24, 2020 8:06:07 PM client.AdministratorClient getPlayerStatus
+INFO: IP : 132.123.123.123, username : admin, start getPlayerStatus() operation.
+May 24, 2020 8:06:07 PM client.AdministratorClient getPlayerStatus
+INFO: IP : 132.123.123.123, username : admin, Result getPlayerStatus() : North-American : 0 online , 9 offline.  European : 0 online , 4 offline. Asian : 0 online , 5 offline.
+May 24, 2020 8:06:30 PM client.AdministratorClient getPlayerStatus
+INFO: IP : 93.123.123.123, username : admin, start getPlayerStatus() operation.
+May 24, 2020 8:06:30 PM client.AdministratorClient getPlayerStatus
+INFO: IP : 93.123.123.123, username : admin, Result getPlayerStatus() : Invalid username or password  

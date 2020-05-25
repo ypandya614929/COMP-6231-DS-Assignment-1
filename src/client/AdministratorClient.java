@@ -14,7 +14,8 @@ import java.nio.file.Paths;
 import java.rmi.AccessException;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
-import interfaceClass.AdminInterface;
+
+import interfaces.AdminInterface;
 
 /**
  *

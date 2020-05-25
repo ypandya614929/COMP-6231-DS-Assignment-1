@@ -1,4 +1,4 @@
-package interfaceClass;
+package interfaces;
 
 import java.io.IOException;
 import java.rmi.Remote;

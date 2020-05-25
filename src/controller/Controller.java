@@ -14,8 +14,9 @@ import java.net.UnknownHostException;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.logging.Logger;
-import interfaceClass.PlayerInterface;
-import interfaceClass.AdminInterface;
+
+import interfaces.AdminInterface;
+import interfaces.PlayerInterface;
 import server.Asia;
 import server.NorthAmerica;
 import server.Europe;

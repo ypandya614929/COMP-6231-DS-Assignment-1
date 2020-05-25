@@ -13,8 +13,10 @@ import java.rmi.registry.Registry;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
+
+import interfaces.PlayerInterface;
+
 import java.io.File;
-import interfaceClass.PlayerInterface;
 
 /**
  *
