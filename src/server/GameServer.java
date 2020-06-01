@@ -33,11 +33,14 @@ public class GameServer {
 		Controller northamerica = new Controller("NA");
 		Controller asia = new Controller("AS");
 		
-		Registry registry = LocateRegistry.createRegistry(8080);
-
-		registry.bind("North America", northamerica);
-		registry.bind("Asia", asia);
-		registry.bind("Europe", europe);
+		Registry registry1 = LocateRegistry.createRegistry(9990);
+		registry1.bind("North America", northamerica);
+		
+		Registry registry2 = LocateRegistry.createRegistry(9991);
+		registry2.bind("Europe", europe);
+		
+		Registry registry3 = LocateRegistry.createRegistry(9992);
+		registry3.bind("Asia", asia);
 				
 		System.out.println("Server(s) are Started");
 		

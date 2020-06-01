@@ -1,0 +1,14 @@
+Jun 01, 2020 6:44:51 AM client.PlayerClient addLog
+INFO: 
+Jun 01, 2020 6:44:51 AM client.PlayerClient createAccount
+INFO: IP : 93.123.123.123, username : ypandya, start createPlayerAccount() operation.
+Jun 01, 2020 6:44:51 AM client.PlayerClient createAccount
+INFO: IP : 93.123.123.123, username : ypandya, Result createPlayerAccount() : Player created successfully
+Jun 01, 2020 6:45:18 AM client.PlayerClient signIn
+INFO: IP : 93.123.123.123, username : ypandya, start playerSignIn() operation.
+Jun 01, 2020 6:45:18 AM client.PlayerClient signIn
+INFO: IP : 93.123.123.123, username : ypandya, Result playerSignIn() : Player sign in successfully
+Jun 01, 2020 6:45:53 AM client.PlayerClient signOut
+INFO: IP : 93.123.123.123, username : ypandya, start playerSignOut() operation.
+Jun 01, 2020 6:45:53 AM client.PlayerClient signOut
+INFO: IP : 93.123.123.123, username : ypandya, Result playerSignOut() : Player sign out successfully

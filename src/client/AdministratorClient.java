@@ -27,7 +27,9 @@ public class AdministratorClient {
 	 * This is the admin user class containing admin user operations
 	 */
 	static AdminInterface adminObj;
-	static Registry registry;
+	static Registry registry1;
+	static Registry registry2;
+	static Registry registry3;
 	static BufferedReader br;
 	private static Logger logger;
 	
@@ -40,7 +42,10 @@ public class AdministratorClient {
 	 */
 	public static void main(String[] args) throws NotBoundException, IOException, InterruptedException {
 
-		registry = LocateRegistry.getRegistry(8080);
+		registry1 = LocateRegistry.getRegistry(9990);
+		registry2 = LocateRegistry.getRegistry(9991);
+		registry3 = LocateRegistry.getRegistry(9992);
+		
 		br = new BufferedReader(new InputStreamReader(System.in));
 		while (true) {
 			adminObj = null;
@@ -241,13 +246,13 @@ public class AdministratorClient {
 	 */
 	public static void createAdminObject(String ip) throws AccessException, RemoteException, NotBoundException {
 		if (ip.startsWith("132")) {
-			adminObj = (AdminInterface) registry.lookup("North America");
+			adminObj = (AdminInterface) registry1.lookup("North America");
 		} 
 		else if (ip.startsWith("93")) {
-			adminObj = (AdminInterface) registry.lookup("Europe");
+			adminObj = (AdminInterface) registry2.lookup("Europe");
 		} 
 		else if (ip.startsWith("182")) {
-			adminObj = (AdminInterface) registry.lookup("Asia");
+			adminObj = (AdminInterface) registry3.lookup("Asia");
 		}
 	}
 }
