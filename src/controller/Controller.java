@@ -56,21 +56,21 @@ public class Controller extends UnicastRemoteObject implements PlayerInterface, 
 		if (IP.equals("EU")) 
 		{
 			Europe europe = new Europe(this);
-			Runnable eu = () -> {europe.serverConnection(9990);};
+			Runnable eu = () -> {europe.serverConnection(8880);};
 			Thread t1 = new Thread(eu);
 			t1.start();
 		} 
 		else if (IP.equals("AS")) 
 		{
 			Asia asia = new Asia(this);
-			Runnable as = () -> {asia.serverConnection(9991);};
+			Runnable as = () -> {asia.serverConnection(8881);};
 			Thread t2 = new Thread(as);
 			t2.start();
 		} 
 		else if (IP.equals("NA")) 
 		{
 			NorthAmerica northamerica = new NorthAmerica(this);
-			Runnable na = () -> {northamerica.serverConnection(9992);};
+			Runnable na = () -> {northamerica.serverConnection(8882);};
 			Thread t3 = new Thread(na);
 			t3.start();
 		} 
@@ -165,23 +165,23 @@ public class Controller extends UnicastRemoteObject implements PlayerInterface, 
 		if (ipAddress.startsWith("132")) {
 			output += naData.getPlayerStatus(userName, password, ipAddress);
 			output += " ";
-			output += DatafromOtherIP(userName, password, ipAddress, 9990);
+			output += DatafromOtherIP(userName, password, ipAddress, 8880);
 			output += " ";
-			output += DatafromOtherIP(userName, password, ipAddress, 9991);
+			output += DatafromOtherIP(userName, password, ipAddress, 8881);
 		}
 		else if (ipAddress.startsWith("93")) {
 			output += euData.getPlayerStatus(userName, password, ipAddress);
 			output += " ";
-			output += DatafromOtherIP(userName, password, ipAddress, 9991);
+			output += DatafromOtherIP(userName, password, ipAddress, 8881);
 			output += " ";
-			output += DatafromOtherIP(userName, password, ipAddress, 9992);
+			output += DatafromOtherIP(userName, password, ipAddress, 8882);
 		}
 		else if (ipAddress.startsWith("182")) {
 			output += asData.getPlayerStatus(userName, password, ipAddress);
 			output += " ";
-			output += DatafromOtherIP(userName, password, ipAddress, 9990);
+			output += DatafromOtherIP(userName, password, ipAddress, 8880);
 			output += " ";
-			output += DatafromOtherIP(userName, password, ipAddress, 9992);
+			output += DatafromOtherIP(userName, password, ipAddress, 8882);
 		}
 		return output;
 	}

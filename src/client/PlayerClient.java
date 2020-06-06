@@ -27,7 +27,9 @@ public class PlayerClient {
 	/**
 	 * This is the player user class containing player user operations
 	 */
-	static Registry reg;
+	static Registry reg1;
+	static Registry reg2;
+	static Registry reg3;
 	static PlayerInterface playerObj;
 	static BufferedReader br;
 	private static Logger logger;
@@ -42,7 +44,10 @@ public class PlayerClient {
 	 */
 	public static void main(String[] args) throws NotBoundException, IOException, InterruptedException {
 		
-		reg = LocateRegistry.getRegistry(8080);
+		reg1 = LocateRegistry.getRegistry(9990);
+		reg2 = LocateRegistry.getRegistry(9991);
+		reg3 = LocateRegistry.getRegistry(9992);
+		
 		br = new BufferedReader(new InputStreamReader(System.in));
 		while (true) {
 			playerObj = null;
@@ -477,13 +482,13 @@ public class PlayerClient {
 	public static void createPlayerObject(String ip)
 			throws AccessException, RemoteException, NotBoundException {
 		if (ip.startsWith("132")) {
-			playerObj = (PlayerInterface) reg.lookup("North America");
+			playerObj = (PlayerInterface) reg1.lookup("North America");
 		} 
 		else if (ip.startsWith("93")) {
-			playerObj = (PlayerInterface) reg.lookup("Europe");
+			playerObj = (PlayerInterface) reg2.lookup("Europe");
 		} 
 		else if (ip.startsWith("182")) {
-			playerObj = (PlayerInterface) reg.lookup("Asia");
+			playerObj = (PlayerInterface) reg3.lookup("Asia");
 		}
 	}
 }
