@@ -1,6 +1,0 @@
-Jun 01, 2020 6:41:11 AM client.PlayerClient addLog
-INFO: 
-Jun 01, 2020 6:41:11 AM client.PlayerClient signIn
-INFO: IP : 93.111.111.112, username : testuser10, start playerSignIn() operation.
-Jun 01, 2020 6:41:11 AM client.PlayerClient signIn
-INFO: IP : 93.111.111.112, username : testuser10, Result playerSignIn() : Player sign in successfully
