@@ -1,0 +1,6 @@
+Jun 06, 2020 8:29:05 PM client.AdministratorClient addLog
+INFO: 
+Jun 06, 2020 8:29:05 PM client.AdministratorClient getPlayerStatus
+INFO: IP : 93.123.123.123, username : admin1, start getPlayerStatus() operation.
+Jun 06, 2020 8:29:05 PM client.AdministratorClient getPlayerStatus
+INFO: IP : 93.123.123.123, username : admin1, Result getPlayerStatus() : Invalid username or password  

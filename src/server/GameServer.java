@@ -1,4 +1,10 @@
 package server;
+//References:
+//https://systembash.com/a-simple-java-udp-server-and-udp-client/
+//https://www.tutorialspoint.com/java_rmi/java_rmi_introduction.htm
+//https://www.javatpoint.com/RMI
+//https://www.geeksforgeeks.org/multithreading-in-java/
+//https://www.geeksforgeeks.org/synchronized-in-java/
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;

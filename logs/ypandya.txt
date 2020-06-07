@@ -1,0 +1,26 @@
+Jun 06, 2020 8:17:39 PM client.PlayerClient addLog
+INFO: 
+Jun 06, 2020 8:17:39 PM client.PlayerClient createAccount
+INFO: IP : 182.111.111.111, username : ypandya, start createPlayerAccount() operation.
+Jun 06, 2020 8:17:39 PM client.PlayerClient createAccount
+INFO: IP : 182.111.111.111, username : ypandya, Result createPlayerAccount() : Player created successfully
+Jun 06, 2020 8:18:40 PM client.PlayerClient createAccount
+INFO: IP : 182.222.222.222, username : ypandya, start createPlayerAccount() operation.
+Jun 06, 2020 8:18:40 PM client.PlayerClient createAccount
+INFO: IP : 182.222.222.222, username : ypandya, Result createPlayerAccount() : Player already exists
+Jun 06, 2020 8:19:36 PM client.PlayerClient signIn
+INFO: IP : 182.111.111.111, username : ypandya, start playerSignIn() operation.
+Jun 06, 2020 8:19:36 PM client.PlayerClient signIn
+INFO: IP : 182.111.111.111, username : ypandya, Result playerSignIn() : Player sign in successfully
+Jun 06, 2020 8:22:45 PM client.PlayerClient signIn
+INFO: IP : 182.111.111.111, username : ypandya, start playerSignIn() operation.
+Jun 06, 2020 8:22:45 PM client.PlayerClient signIn
+INFO: IP : 182.111.111.111, username : ypandya, Result playerSignIn() : Player already signed in
+Jun 06, 2020 8:27:17 PM client.PlayerClient signOut
+INFO: IP : 182.111.111.111, username : ypandya, start playerSignOut() operation.
+Jun 06, 2020 8:27:17 PM client.PlayerClient signOut
+INFO: IP : 182.111.111.111, username : ypandya, Result playerSignOut() : Player sign out successfully
+Jun 06, 2020 8:28:12 PM client.PlayerClient signOut
+INFO: IP : 182.111.111.111, username : ypandya, start playerSignOut() operation.
+Jun 06, 2020 8:28:12 PM client.PlayerClient signOut
+INFO: IP : 182.111.111.111, username : ypandya, Result playerSignOut() : Player is not signed in

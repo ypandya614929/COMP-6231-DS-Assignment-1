@@ -1,5 +1,7 @@
 package model;
-
+//References:
+//https://www.geeksforgeeks.org/multithreading-in-java/
+//https://www.geeksforgeeks.org/synchronized-in-java/
 class TestDemo extends Thread {
 	ASData asData;
 

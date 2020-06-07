@@ -1,0 +1,10 @@
+Jun 06, 2020 8:10:46 PM client.AdministratorClient addLog
+INFO: 
+Jun 06, 2020 8:10:47 PM client.AdministratorClient getPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, start getPlayerStatus() operation.
+Jun 06, 2020 8:10:47 PM client.AdministratorClient getPlayerStatus
+INFO: IP : 93.123.123.123, username : Admin, Result getPlayerStatus() : European : 0 online , 4 offline.  Asian : 0 online , 5 offline. North-American : 0 online , 9 offline.
+Jun 06, 2020 8:23:39 PM client.AdministratorClient getPlayerStatus
+INFO: IP : 132.333.333.333, username : Admin, start getPlayerStatus() operation.
+Jun 06, 2020 8:23:39 PM client.AdministratorClient getPlayerStatus
+INFO: IP : 132.333.333.333, username : Admin, Result getPlayerStatus() : North-American : 0 online , 9 offline.  European : 0 online , 4 offline. Asian : 1 online , 5 offline.
